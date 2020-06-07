@@ -1,0 +1,137 @@
+html{
+	height: 100%;
+}
+body{
+	margin: 0;
+	height: 100%;
+	background: url(../img/b.png) no-repeat;
+	background-size: 100% 100%;
+}
+h1{
+	font-size: 9vh;
+	text-transform: uppercase;
+	font-family: "Archivo Black", "Archivo", sans-serif;
+	font-weight: normal;
+	display: block;
+	height: auto;
+	text-align: center;
+}
+
+.main{
+	position: relative;
+	margin: 0 auto;
+	height: 100%;
+	width: 70%;
+}
+
+label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 82%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url(../img/a.png) no-repeat;
+    background-size: 100% 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+    .cardD{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+
+    .card .back {
+        background: #222;
+        color: #FFF;
+        text-align: left;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+    .text{
+    	font-family: 'Inter', sans-serif;	
+    	margin: 0 auto;
+    	width: 70%;
+    	text-align: left;
+    	font-size: 2vh;
+    }
+    .textA{
+    	width: 70%;
+    	margin: 5% 0 0 0;
+    	float: right;
+    	padding: 15px;
+    }
+    .tar{
+    	text-align: right;
+    }
+
+label:hover .card {
+    -webkit-transform: rotateX(5deg);
+    transform: rotateX(5deg);
+    box-shadow: 0 20px 50px rgba(217, 54, 173, 1);
+}
+
+input {
+    display: none;
+}
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(170deg);
+    box-shadow: 0 20px 20px #DD58F5;
+}
+
+
+:root {
+	--shadow-color: #EC93DC;
+	--shadow-color-light: #D7B3CC;
+}
+.logo-1 {
+	color: white;
+	animation: neon 2s infinite;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
